@@ -1,11 +1,12 @@
 import { ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native';
 import background from "../assets/background.png";
 
-const Main = () => {
+const Main = ({ navigation }) => {
 
     const onPressFunction = () => {
-        console.log("Pressed")
+        navigation.navigate("Tabs")
     }
+
     return (
         <ImageBackground source={background} style={styles.container}>
 
