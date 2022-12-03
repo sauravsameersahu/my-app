@@ -11,12 +11,12 @@ import play from "../assets/play.png"
 const ExploreMoods = ({ navigation }) => {
 
     const [playlist] = useState([
-        { name: "Camping Relax", key: 1, duration: "3:10:55", background: night_hut, backgroundUri: "../assets/night_hut.png", no_of_songs: 20 },
-        { name: "Samping Relax", key: 2, duration: "2:30:45", background: night_crecent, backgroundUri: "../assets/night_crecent.png", no_of_songs: 20 },
-        { name: "Night Mix Relax", key: 3, duration: "1:20:25", background: night_lake, backgroundUri: "../assets/night_lake.png", no_of_songs: 20 },
-        { name: "Sleep Cool Relax", key: 4, duration: "3:10:55", background: night_sea, backgroundUri: "../assets/night_sea.png", no_of_songs: 20 },
-        { name: "Horror Mix", key: 5, duration: "2:30:45", background: night_grave, backgroundUri: "../assets/night_grave.png", no_of_songs: 20 },
-        { name: "Lonely Nights Mix", key: 6, duration: "1:20:25", background: night_road, backgroundUri: "../assets/night_road.png", no_of_songs: 20 }
+        { name: "Camping Relax", key: 1, duration: "3:10:55", background: night_hut, backgroundUri: "../assets/night_hut.png", no_of_songs: 5, backgroundName: "night_hut" },
+        { name: "Samping Relax", key: 2, duration: "2:30:45", background: night_crecent, backgroundUri: "../assets/night_crecent.png", no_of_songs: 5, backgroundName: "night_crecent" },
+        { name: "Night Mix Relax", key: 3, duration: "1:20:25", background: night_lake, backgroundUri: "../assets/night_lake.png", no_of_songs: 5, backgroundName: "night_lake" },
+        { name: "Sleep Cool Relax", key: 4, duration: "3:10:55", background: night_sea, backgroundUri: "../assets/night_sea.png", no_of_songs: 5, backgroundName: "night_sea" },
+        { name: "Horror Mix", key: 5, duration: "2:30:45", background: night_grave, backgroundUri: "../assets/night_grave.png", no_of_songs: 5, backgroundName: "night_grave" },
+        { name: "Lonely Nights Mix", key: 6, duration: "1:20:25", background: night_road, backgroundUri: "../assets/night_road.png", no_of_songs: 5, backgroundName: "night_road" }
     ])
 
     const onMoodPress = (e, item) => {

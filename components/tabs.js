@@ -19,7 +19,7 @@ const Tabs = () => {
             <Tab.Navigator
                 screenOptions={{
                     headerShown: false,
-                    tabBarItemStyle:styles.bottomNav
+                    tabBarItemStyle: styles.bottomNav
                 }}
             >
                 <Tab.Screen name="Home" component={Home} options={{
@@ -106,9 +106,7 @@ export default Tabs
 
 const styles = StyleSheet.create({
     bottomNav: {
-        // bottom: 45,
         backgroundColor: "#FFFFFF",
-        height: 60
     },
     iconStyles: {
         alignItems: 'center',

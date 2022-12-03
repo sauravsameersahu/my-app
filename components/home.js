@@ -31,7 +31,7 @@ const Home = ({ navigation }) => {
     return (
         <>
             <View style={styles.container}>
-                <View style={{ marginTop: 60 }}>
+                <View style={{ marginTop: 30 }}>
 
                     <ScrollView>
 
@@ -59,12 +59,13 @@ const Home = ({ navigation }) => {
 
                         <View style={styles.row_space_between}>
                             <Text style={styles.subHeadingText}>Select Category</Text>
-                            <Text style={styles.linkText}>See all
+                            <View style={{ justifyContent: "space-between", flexDirection: "row" }}>
+                                <Text style={styles.linkText}>See all</Text>
                                 <Image
                                     source={go}
-                                    style={styles.searchIcon}
+                                    style={styles.nextIcon}
                                 />
-                            </Text>
+                            </View>
                         </View>
 
                         <FlatList
@@ -118,11 +119,9 @@ const styles = StyleSheet.create({
     subHeadingText: {
         fontWeight: "bold",
         fontSize: 18,
-        lineHeight: 44,
     },
     linkText: {
         fontSize: 14,
-        lineHeight: 44,
         color: "#5099B5"
     },
     inputWrapper: {
@@ -143,6 +142,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: 20,
         marginVertical: 10
+    },
+    nextIcon: {
+        padding: 10,
+        height: 15,
+        width: 15,
     },
     moodIcons: {
         padding: 10,
