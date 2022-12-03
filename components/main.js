@@ -10,18 +10,9 @@ const Main = ({ navigation }) => {
     return (
         <ImageBackground source={background} style={styles.container}>
 
-            <View style={{alignItems: 'center',flex:1}}>
-                <View style={{
-                    bottom: 100,
-                    position: 'absolute',
-                    marginHorizontal: 25
-                }}>
-                    <Text style={{
-                        fontWeight: "bold",
-                        fontSize: 40,
-                        lineHeight: 49,
-                        width: 340,
-                    }}>
+            <View style={styles.bottom}>
+                <View style={styles.textWrapper}>
+                    <Text style={styles.boldText}>
                         Sleep Better
                         {"\n"}
                         Wake Happier
@@ -31,17 +22,7 @@ const Main = ({ navigation }) => {
                     </Text>
                 </View>
 
-                <Pressable style={{
-                    height: 60,
-                    borderRadius: 20,
-                    width: 340,
-                    backgroundColor: '#5099B5',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    position: 'absolute',
-                    bottom: 10,
-                    marginHorizontal: 25
-                }} onPress={onPressFunction}>
+                <Pressable style={styles.button} onPress={onPressFunction}>
                     <Text style={styles.textStyle}>Get Started</Text>
                 </Pressable>
             </View>
@@ -53,6 +34,31 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    boldText: {
+        fontWeight: "bold",
+        fontSize: 40,
+        lineHeight: 49,
+        width: 340,
+    },
+    button: {
+        height: 60,
+        borderRadius: 20,
+        width: 340,
+        backgroundColor: '#5099B5',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        bottom: 10,
+        marginHorizontal: 25
+    },
+    textWrapper: {
+        bottom: 100,
+        position: 'absolute',
+        marginHorizontal: 25
+    }, bottom: {
+        alignItems: 'center',
+        flex: 1
+    }
 });
 
 export default Main

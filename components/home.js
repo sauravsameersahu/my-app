@@ -31,7 +31,7 @@ const Home = ({ navigation }) => {
     return (
         <>
             <View style={styles.container}>
-                <View style={{ marginTop: 30 }}>
+                <View style={styles.topWrapper}>
 
                     <ScrollView>
 
@@ -109,6 +109,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#FFFFFF"
+    },
+    topWrapper: {
+        marginTop: 30
     },
     greetingsText: {
         fontWeight: "bold",

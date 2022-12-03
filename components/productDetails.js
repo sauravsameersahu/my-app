@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
-import { ImageBackground, Text, View, StyleSheet, FlatList, Pressable } from "react-native"
+import { ImageBackground, Text, View, StyleSheet, FlatList, Pressable, Button, Image } from "react-native"
 import night_crecent from "../assets/night_crecent.png"
 import night_grave from "../assets/night_grave.png"
 import night_hut from "../assets/night_hut.png"
 import night_lake from "../assets/night_lake.png"
 import night_road from "../assets/night_road.png"
 import night_sea from "../assets/night_sea.png"
+import back from "../assets/back.png"
+import more from "../assets/more-options-horizontal.png"
 
 const ProductDetails = ({ route, navigation }) => {
     const { params } = route
@@ -48,6 +50,15 @@ const ProductDetails = ({ route, navigation }) => {
                 source={background}
                 style={styles.topImage}
             >
+                <View style={styles.backContainer}>
+
+                    <Pressable onPress={() => navigation.navigate('Explore Moods')}>
+                        <Image
+                            source={back}
+                        />
+                    </Pressable>
+
+                </View>
                 <View style={styles.imageTextContainer}>
                     <Text style={styles.playlistText}>
                         {params.name}
@@ -78,7 +89,9 @@ const ProductDetails = ({ route, navigation }) => {
                                 </View>
 
                                 <View style={styles.options}>
-                                    <Text>...</Text>
+                                    <Image
+                                        source={more}
+                                    />
                                 </View>
 
                             </View>
@@ -102,11 +115,15 @@ const styles = StyleSheet.create({
     },
     topImage: {
         flex: 1,
-        justifyContent: "flex-end"
+        justifyContent: "space-between"
     },
     imageTextContainer: {
         marginLeft: 30,
         marginBottom: 20
+    },
+    backContainer: {
+        marginLeft: 30,
+        marginTop: 40
     },
     bottomContainer: {
         flex: 2,
@@ -130,7 +147,7 @@ const styles = StyleSheet.create({
     songDetails: {
         flex: 3,
         marginHorizontal: 10,
-        justifyContent: "space-between",
+        justifyContent: "space-around",
         flexDirection: "column"
     },
     durationText: {
